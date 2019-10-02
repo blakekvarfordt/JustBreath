@@ -13,6 +13,7 @@
 		63E6C66F2345038500071294 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E6C66E2345038500071294 /* Main.storyboard */; };
 		63E6C671234503B500071294 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 63E6C670234503B500071294 /* LaunchScreen.storyboard */; };
 		D4BA9CD22345059B001E6140 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4BA9CD12345059B001E6140 /* CloudKit.framework */; };
+		D4BA9CDA234508CC001E6140 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA9CD9234508CC001E6140 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		63E6C670234503B500071294 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4BA9CCF23450595001E6140 /* JustBreath.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JustBreath.entitlements; sourceTree = "<group>"; };
 		D4BA9CD12345059B001E6140 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		D4BA9CD9234508CC001E6140 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		6335FC45234501F400DCE4BC /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				D4BA9CD9234508CC001E6140 /* User.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -223,6 +226,7 @@
 			files = (
 				6335FC312345017800DCE4BC /* AppDelegate.swift in Sources */,
 				6335FC332345017800DCE4BC /* SceneDelegate.swift in Sources */,
+				D4BA9CDA234508CC001E6140 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
