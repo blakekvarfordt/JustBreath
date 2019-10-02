@@ -2,6 +2,6 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "self:JustBreath.xcodeproj">
+      location = "self:JustBreateApp.xcodeproj">
    </FileRef>
 </Workspace>

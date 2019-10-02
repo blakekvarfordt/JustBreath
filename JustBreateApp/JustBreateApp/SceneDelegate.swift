@@ -1,9 +1,9 @@
 //
 //  SceneDelegate.swift
-//  JustBreath
+//  JustBreateApp
 //
-//  Created by Blake kvarfordt on 10/2/19.
-//  Copyright © 2019 Blake kvarfordt. All rights reserved.
+//  Created by Apps on 10/2/19.
+//  Copyright © 2019 Cameron Stuart. All rights reserved.
 //
 
 import UIKit
