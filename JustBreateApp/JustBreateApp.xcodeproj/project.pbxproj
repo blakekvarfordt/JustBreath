@@ -14,6 +14,7 @@
 		D4A099FA2345111F00B46AA0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A099F82345111F00B46AA0 /* LaunchScreen.storyboard */; };
 		D4E1D9F02345116600F1CFA5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E1D9EF2345116600F1CFA5 /* CloudKit.framework */; };
 		D4E1D9F52345129B00F1CFA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9F42345129B00F1CFA5 /* User.swift */; };
+		FCBF933623451CFF001AD43E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBF933523451CFF001AD43E /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,10 +24,11 @@
 		D4A099F42345111F00B46AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D4A099F62345111F00B46AA0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4A099F92345111F00B46AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		D4A099FB2345111F00B46AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = ../Info.plist; sourceTree = "<group>"; };
+		D4A099FB2345111F00B46AA0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4E1D9ED2345116300F1CFA5 /* JustBreateApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = JustBreateApp.entitlements; sourceTree = "<group>"; };
 		D4E1D9EF2345116600F1CFA5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D4E1D9F42345129B00F1CFA5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FCBF933523451CFF001AD43E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			isa = PBXGroup;
 			children = (
 				D4E1D9F42345129B00F1CFA5 /* User.swift */,
+				FCBF933523451CFF001AD43E /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -176,6 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCBF933623451CFF001AD43E /* Response.swift in Sources */,
 				D4A099EE2345111F00B46AA0 /* AppDelegate.swift in Sources */,
 				D4A099F02345111F00B46AA0 /* SceneDelegate.swift in Sources */,
 				D4E1D9F52345129B00F1CFA5 /* User.swift in Sources */,
@@ -254,6 +258,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
@@ -308,6 +313,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = "";
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
@@ -323,15 +329,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = JustBreateApp/JustBreateApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KMTDCPCY5V;
-				INFOPLIST_FILE = "/Users/Apps/Documents/DevMountain/Group Project/JustBreath/JustBreateApp/JustBreateApp/Resources/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "/Users/kevindtanner/Documents/Coding/DevMountain/DevMountain - Course/Group Project/JustBreath/JustBreateApp/JustBreateApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CameronStuart.JustBreateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -342,15 +350,17 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = JustBreateApp/JustBreateApp.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = KMTDCPCY5V;
-				INFOPLIST_FILE = "/Users/Apps/Documents/DevMountain/Group Project/JustBreath/JustBreateApp/JustBreateApp/Resources/Info.plist";
+				DEVELOPMENT_TEAM = "";
+				INFOPLIST_FILE = "/Users/kevindtanner/Documents/Coding/DevMountain/DevMountain - Course/Group Project/JustBreath/JustBreateApp/JustBreateApp/Resources/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.CameronStuart.JustBreateApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
