@@ -25,8 +25,8 @@ class User {
     var username: String
     var kpPoints: Int = 0
     var kpLevel: String = "Root"
-    var respondedTo: [String] = []
-    var savedResponses: [String] = []
+    var respondedTo: [String] = ["default"]
+    var savedResponses: [String] = ["default"]
     let recordID: CKRecord.ID
     let appleUserReference: CKRecord.Reference
     
