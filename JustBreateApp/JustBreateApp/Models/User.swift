@@ -7,9 +7,6 @@
 //
 
 import Foundation
-<<<<<<< HEAD
-
-=======
 import CloudKit
 
 struct UserConstants {
@@ -76,4 +73,3 @@ extension CKRecord {
         setValue(user.appleUserReference, forKey: UserConstants.appleUserReferenceKey)
     }
 }
->>>>>>> master
