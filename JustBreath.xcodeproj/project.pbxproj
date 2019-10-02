@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -20,6 +20,7 @@
 		D4BA9CE223450AD9001E6140 /* todelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA9CE123450AD9001E6140 /* todelete.swift */; };
 		D4BA9CE423450AE5001E6140 /* todelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA9CE323450AE5001E6140 /* todelete.swift */; };
 		D4BA9CE623450AEE001E6140 /* todelete.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4BA9CE523450AEE001E6140 /* todelete.swift */; };
+		FC2985D123450C4F001E9BB2 /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC2985D023450C4F001E9BB2 /* Response.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +40,7 @@
 		D4BA9CE123450AD9001E6140 /* todelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todelete.swift; sourceTree = "<group>"; };
 		D4BA9CE323450AE5001E6140 /* todelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todelete.swift; sourceTree = "<group>"; };
 		D4BA9CE523450AEE001E6140 /* todelete.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = todelete.swift; sourceTree = "<group>"; };
+		FC2985D023450C4F001E9BB2 /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				D4BA9CD9234508CC001E6140 /* User.swift */,
+				FC2985D023450C4F001E9BB2 /* Response.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -207,7 +210,7 @@
 				};
 			};
 			buildConfigurationList = 6335FC282345017800DCE4BC /* Build configuration list for PBXProject "JustBreath" */;
-			compatibilityVersion = "Xcode 9.3";
+			compatibilityVersion = "Xcode 11.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -246,6 +249,7 @@
 				6335FC332345017800DCE4BC /* SceneDelegate.swift in Sources */,
 				D4BA9CE623450AEE001E6140 /* todelete.swift in Sources */,
 				D4BA9CDA234508CC001E6140 /* User.swift in Sources */,
+				FC2985D123450C4F001E9BB2 /* Response.swift in Sources */,
 				D4BA9CE223450AD9001E6140 /* todelete.swift in Sources */,
 				D4BA9CDE23450A98001E6140 /* todelete.swift in Sources */,
 				D4BA9CDC23450A8D001E6140 /* todelete.swift in Sources */,
