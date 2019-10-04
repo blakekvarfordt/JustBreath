@@ -40,7 +40,7 @@ class RequestController {
     }
     
     func fetchRequests(completion: @escaping (Bool) -> Void) {
-        let currentUserRespondedTo = UserController.shared.currentUser.respodedTo
+        guard let currentUserRespondedTo = UserController.shared.currentUser?.respondedTo else { completion(false); return }
         let predicate = NSPredicate(format: "\(RequestConstants.userReferenceKey) != %@", currentUserRespondedTo)
         let query = CKQuery(recordType: RequestConstants.recordTypeKey, predicate: predicate)
         publicDataBase.perform(query, inZoneWith: nil) { (records, error) in
@@ -60,7 +60,7 @@ class RequestController {
     }
     
     func fetchCurrentUserRequests(completion: @escaping (Bool) -> Void) {
-        guard let userReference  = UserController.shared.currentUser.recordID else { completion(false); return }
+        guard let userReference  = UserController.shared.currentUser?.recordID else { completion(false); return }
         
         let predicate = NSPredicate(format: "\(RequestConstants.userReferenceKey)", userReference)
         let query = CKQuery(recordType: RequestConstants.recordTypeKey, predicate: predicate)
