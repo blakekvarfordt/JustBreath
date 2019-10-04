@@ -18,6 +18,7 @@
 		D4E1D9F52345129B00F1CFA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9F42345129B00F1CFA5 /* User.swift */; };
 		D4E1D9F723452BED00F1CFA5 /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9F623452BED00F1CFA5 /* Daily.swift */; };
 		D4E1D9FD2347A30800F1CFA5 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9FC2347A30800F1CFA5 /* UserController.swift */; };
+		D4E1D9FF2347D91900F1CFA5 /* ResponseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9FE2347D91900F1CFA5 /* ResponseController.swift */; };
 		FCBF933623451CFF001AD43E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBF933523451CFF001AD43E /* Response.swift */; };
 		FCD584F02347DB450025B5E2 /* GoalOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD584EF2347DB450025B5E2 /* GoalOnboardingViewController.swift */; };
 		FCD584F22347DB650025B5E2 /* HowItWorksOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD584F12347DB650025B5E2 /* HowItWorksOnboardingViewController.swift */; };
@@ -52,6 +53,7 @@
 		D4E1D9F42345129B00F1CFA5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D4E1D9F623452BED00F1CFA5 /* Daily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
 		D4E1D9FC2347A30800F1CFA5 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		D4E1D9FE2347D91900F1CFA5 /* ResponseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseController.swift; sourceTree = "<group>"; };
 		FCBF933523451CFF001AD43E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 		FCD584EF2347DB450025B5E2 /* GoalOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalOnboardingViewController.swift; sourceTree = "<group>"; };
 		FCD584F12347DB650025B5E2 /* HowItWorksOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksOnboardingViewController.swift; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				D4E1D9FC2347A30800F1CFA5 /* UserController.swift */,
+				D4E1D9FE2347D91900F1CFA5 /* ResponseController.swift */,
 				63E8A29D2347B30300B0D302 /* RequestController.swift */,
 			);
 			path = "Model Controllers";
@@ -312,6 +315,7 @@
 				D4E1D9F723452BED00F1CFA5 /* Daily.swift in Sources */,
 				D4E1D9FD2347A30800F1CFA5 /* UserController.swift in Sources */,
 				D4A099F02345111F00B46AA0 /* SceneDelegate.swift in Sources */,
+				D4E1D9FF2347D91900F1CFA5 /* ResponseController.swift in Sources */,
 				FCDBA2622347B8E700163581 /* WelcomeOnboardingViewController.swift in Sources */,
 				FCD584FD2347DCE50025B5E2 /* RequestFeedViewController.swift in Sources */,
 				D4E1D9F52345129B00F1CFA5 /* User.swift in Sources */,

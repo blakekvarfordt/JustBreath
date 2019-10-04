@@ -53,7 +53,7 @@ class Response {
         }
     }
     
-    init(username: String, bodyText: String?, image: UIImage, link: URL?, timestamp: Double, responseTags: [String], responseRecordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString), requestReference: CKRecord.Reference) {
+    init(username: String, bodyText: String?, image: UIImage?, link: URL?, timestamp: Double = Date().timeIntervalSince1970, responseTags: [String], responseRecordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString), requestReference: CKRecord.Reference) {
         self.username = username
         self.bodyText = bodyText
         self.link = link
