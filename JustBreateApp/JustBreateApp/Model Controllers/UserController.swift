@@ -7,3 +7,62 @@
 //
 
 import Foundation
+import CloudKit
+
+class UserController {
+    
+    var currentUser: User?
+    var userReference: CKRecord.Reference?
+    
+    let publicDB = CKContainer.default().publicCloudDatabase
+    
+    func createUser(username: String, completion: @escaping (Bool) -> Void) {
+        CKContainer.default().fetchUserRecordID { (userID, error) in
+            if let error = error {
+                print("Failed to fetch the users appleID! \n Error: \(error) \n \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+            
+            guard let userID = userID else { completion(false); return }
+            
+            let reference = CKRecord.Reference(recordID: userID, action: .deleteSelf)
+            self.userReference = reference
+            let newUser = User(username: username, appleUserReference: reference)
+            let userRecord = CKRecord(user: newUser)
+            
+            self.publicDB.save(userRecord) { (record, error) in
+                if let error = error {
+                    print("Failed to create a new user! \n Error: \(error) \n \(error.localizedDescription)")
+                    completion(false)
+                    return
+                }
+                if let record = record {
+                    let savedUser = User(ckRecord: record)
+                    self.currentUser = savedUser
+                    completion(true)
+                }
+            }
+        }
+    }
+    
+    func fetchUser(completion: @escaping (Bool) -> Void) {
+        
+        guard let reference = userReference else { completion(false); return }
+        let predicate = NSPredicate(format: "\(UserConstants.typeKey)", reference)
+        let query = CKQuery(recordType: UserConstants.typeKey, predicate: predicate)
+        publicDB.perform(query, inZoneWith: nil) { (userRecord, error) in
+            if let error = error {
+                print("Failed to fetch user! \n Error: \(error) \n \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+            
+            if let userRecord = userRecord {
+                let foundUser = User(ckRecord: userRecord[0])
+                self.currentUser = foundUser
+                completion(true)
+            }
+        }
+    }
+}
