@@ -11,6 +11,8 @@ import CloudKit
 
 class UserController {
     
+    static let shared = UserController()
+    
     var currentUser: User?
     var userReference: CKRecord.Reference?
     
