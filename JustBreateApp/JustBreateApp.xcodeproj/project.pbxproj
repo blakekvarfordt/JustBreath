@@ -16,6 +16,7 @@
 		D4E1D9F02345116600F1CFA5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E1D9EF2345116600F1CFA5 /* CloudKit.framework */; };
 		D4E1D9F52345129B00F1CFA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9F42345129B00F1CFA5 /* User.swift */; };
 		D4E1D9F723452BED00F1CFA5 /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9F623452BED00F1CFA5 /* Daily.swift */; };
+		D4E1D9FD2347A30800F1CFA5 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9FC2347A30800F1CFA5 /* UserController.swift */; };
 		FCBF933623451CFF001AD43E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBF933523451CFF001AD43E /* Response.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,6 +33,7 @@
 		D4E1D9EF2345116600F1CFA5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D4E1D9F42345129B00F1CFA5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D4E1D9F623452BED00F1CFA5 /* Daily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
+		D4E1D9FC2347A30800F1CFA5 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
 		FCBF933523451CFF001AD43E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -67,6 +69,7 @@
 		D4A099EC2345111F00B46AA0 /* JustBreateApp */ = {
 			isa = PBXGroup;
 			children = (
+				D4E1D9FB2347A2E500F1CFA5 /* Model Controllers */,
 				D4E1D9F32345128E00F1CFA5 /* Models */,
 				D4E1D9F2234511C700F1CFA5 /* Storyboards */,
 				D4E1D9F1234511A300F1CFA5 /* Resources */,
@@ -112,6 +115,14 @@
 				63E8A2992347979600B0D302 /* Request.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D4E1D9FB2347A2E500F1CFA5 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4E1D9FC2347A30800F1CFA5 /* UserController.swift */,
+			);
+			path = "Model Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 				63E8A29A2347979600B0D302 /* Request.swift in Sources */,
 				D4A099EE2345111F00B46AA0 /* AppDelegate.swift in Sources */,
 				D4E1D9F723452BED00F1CFA5 /* Daily.swift in Sources */,
+				D4E1D9FD2347A30800F1CFA5 /* UserController.swift in Sources */,
 				D4A099F02345111F00B46AA0 /* SceneDelegate.swift in Sources */,
 				D4E1D9F52345129B00F1CFA5 /* User.swift in Sources */,
 			);
