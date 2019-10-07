@@ -9,13 +9,24 @@
 import UIKit
 
 class ProfileViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    @IBOutlet weak var rankLabel: UILabel!
+    @IBOutlet weak var pointsLabel: UILabel!
+    @IBOutlet weak var usernameLabel: UILabel!
+    
+    // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        setupViews()
     }
     
+    
+    // MARK: - Setup Views
+    func setupViews() {
+        rankLabel.text = "Gold Rank"
+        pointsLabel.text = "\(100) KP Points"
+    }
 
     /*
     // MARK: - Navigation
