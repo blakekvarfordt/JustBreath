@@ -10,7 +10,7 @@ import Foundation
 import CloudKit
 
 class UserController {
-    
+        
     static let shared = UserController()
     
     var currentUser: User?
@@ -66,5 +66,28 @@ class UserController {
                 completion(true)
             }
         }
+    }
+    
+    // Updates the users array of responses in order to precent that response from showing up for them again.
+    func updateUserResponseList(user: User, responseRecordID: String, completion: @escaping (Bool) -> Void) {
+        
+        let modifiedUser = user
+        modifiedUser.respondedTo.append(responseRecordID)
+        
+        let modificationOP = CKModifyRecordsOperation(recordsToSave: [CKRecord(user: user)], recordIDsToDelete: nil)
+        modificationOP.savePolicy = .changedKeys
+        modificationOP.qualityOfService = .userInteractive
+        modificationOP.queuePriority = .high
+        modificationOP.modifyRecordsCompletionBlock = { (_, _, error) in
+            if let error = error {
+                print("Unable to modify user response array. \n Error: \(error) \n \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+            completion(true)
+        }
+        
+        self.publicDB.add(modificationOP)
+        currentUser = modifiedUser
     }
 }

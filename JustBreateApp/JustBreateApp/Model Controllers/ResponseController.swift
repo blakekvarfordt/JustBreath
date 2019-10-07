@@ -27,10 +27,7 @@ class ResponseController {
                 completion(false)
                 return
             }
-            
-            if let record = record {
-                completion(true)
-            }
+            completion(true)
         }
     }
 }
