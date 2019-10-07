@@ -82,6 +82,7 @@
                                             <outlet property="requestImageView" destination="via-jj-2WW" id="utz-Oc-nN2"/>
                                             <outlet property="requestTextLabel" destination="sMG-1Q-NvV" id="ILM-uU-Nsb"/>
                                             <outlet property="usernameLabel" destination="aDO-Vo-IVx" id="dif-oo-kAV"/>
+                                            <segue destination="z0a-5O-dTu" kind="show" identifier="toRequestDetailVC" id="2Le-pz-o9B"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -109,6 +110,16 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73b-Sv-zPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="453.62318840579712" y="319.41964285714283"/>
+        </scene>
+        <!--requestDetailVC-->
+        <scene sceneID="IUQ-RC-jZX">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Requests" referencedIdentifier="requestDetailVC" id="z0a-5O-dTu" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="ocM-MS-HC2"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mi8-0o-pwL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1272" y="319"/>
         </scene>
     </scenes>
 </document>
