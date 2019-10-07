@@ -156,10 +156,10 @@
             </objects>
             <point key="canvasLocation" x="-1055" y="329"/>
         </scene>
-        <!--View Controller-->
+        <!--Delete Past Daily Entry View Controller-->
         <scene sceneID="wCQ-JO-hJI">
             <objects>
-                <viewController id="q1f-sM-N9D" sceneMemberID="viewController">
+                <viewController id="q1f-sM-N9D" customClass="DeletePastDailyEntryViewController" customModule="JustBreateApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BXY-3f-xKE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -177,6 +177,9 @@
                                 <state key="normal" title="Yes">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="yesButtonTapped:" destination="q1f-sM-N9D" eventType="touchUpInside" id="ZrX-a7-7p4"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CDO-Z6-Ogv">
                                 <rect key="frame" x="279" y="378" width="30" height="30"/>
@@ -184,6 +187,9 @@
                                 <state key="normal" title="No">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="noButtonTapped:" destination="q1f-sM-N9D" eventType="touchUpInside" id="xzn-jr-WHZ"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
