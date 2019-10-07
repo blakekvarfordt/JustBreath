@@ -73,7 +73,7 @@ extension RequestFeedViewController: UITableViewDelegate, UITableViewDataSource 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if tableView == pastRequestsTableView {
-            return ProfileMockDataController.shared.mockDataObjects.count
+            return ProfileMockDataController1.shared.mockDataObjects.count
         } else {
             return ProfileMockDataController2.shared.mockDataObjects.count
         }
@@ -84,7 +84,7 @@ extension RequestFeedViewController: UITableViewDelegate, UITableViewDataSource 
         if tableView == pastRequestsTableView {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "activePastRequestCell", for: indexPath) as? PastRequestsTableViewCell else { return UITableViewCell()}
         
-        let request = ProfileMockDataController.shared.mockDataObjects[indexPath.row]
+        let request = ProfileMockDataController1.shared.mockDataObjects[indexPath.row]
         
         cell.requestLandingPad = request
         
@@ -107,7 +107,7 @@ extension RequestFeedViewController: UITableViewDelegate, UITableViewDataSource 
 
 // MARK: - Mock Data
 
-class ProfileMockDataModel {
+class ProfileMockDataModel1 {
     let text: String
     let image: UIImage?
     
@@ -117,16 +117,16 @@ class ProfileMockDataModel {
     }
 }
 
-class ProfileMockDataController {
-    static let shared = ProfileMockDataController()
+class ProfileMockDataController1 {
+    static let shared = ProfileMockDataController1()
     
-    var mockDataObjects = [ProfileMockDataModel]()
+    var mockDataObjects = [ProfileMockDataModel1]()
     
     init() {
         
-        let request1 = ProfileMockDataModel(text: "#whatever #amiseeingthings #iphoneForTheWin", image: UIImage(named: "mountain"))
-        let request2 = ProfileMockDataModel(text: "#customTableViews #BadDay #WorkSucks", image: UIImage(named: "focus"))
-        let request3 = ProfileMockDataModel(text: "#DoesItWork #WAterIsLife #RAinbow", image: UIImage(named: "canyonJump"))
+        let request1 = ProfileMockDataModel1(text: "#whatever #amiseeingthings #iphoneForTheWin", image: UIImage(named: "mountain"))
+        let request2 = ProfileMockDataModel1(text: "#customTableViews #BadDay #WorkSucks", image: UIImage(named: "focus"))
+        let request3 = ProfileMockDataModel1(text: "#DoesItWork #WAterIsLife #RAinbow", image: UIImage(named: "canyonJump"))
         
         self.mockDataObjects = [request1, request2, request3]
     }
@@ -135,15 +135,15 @@ class ProfileMockDataController {
 }
 
 class ProfileMockDataController2 {
-    static let shared = ProfileMockDataController()
+    static let shared = ProfileMockDataController2()
     
-    var mockDataObjects = [ProfileMockDataModel]()
+    var mockDataObjects = [ProfileMockDataModel1]()
     
     init() {
         
-        let request1 = ProfileMockDataModel(text: "#whatever #amiseeingthings #iphoneForTheWin", image: UIImage(named: "mountain"))
-        let request2 = ProfileMockDataModel(text: "#customTableViews #BadDay #WorkSucks", image: UIImage(named: "focus"))
-        let request3 = ProfileMockDataModel(text: "#DoesItWork #WAterIsLife #RAinbow", image: UIImage(named: "canyonJump"))
+        let request1 = ProfileMockDataModel1(text: "#whatever #amiseeingthings #iphoneForTheWin", image: UIImage(named: "mountain"))
+        let request2 = ProfileMockDataModel1(text: "#customTableViews #BadDay #WorkSucks", image: UIImage(named: "focus"))
+        let request3 = ProfileMockDataModel1(text: "#DoesItWork #WAterIsLife #RAinbow", image: UIImage(named: "canyonJump"))
         
         self.mockDataObjects = [request1, request2, request3]
     }

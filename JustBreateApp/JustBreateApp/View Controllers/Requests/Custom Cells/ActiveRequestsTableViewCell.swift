@@ -19,7 +19,7 @@ class ActiveRequestsTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     
-    var requestLandingPad: ProfileMockDataModel? {
+    var requestLandingPad: ProfileMockDataModel1? {
         didSet {
             layoutIfNeeded()
             setupView()

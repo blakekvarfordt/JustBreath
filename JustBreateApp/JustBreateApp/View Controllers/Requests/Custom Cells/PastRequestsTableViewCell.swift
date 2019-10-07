@@ -18,7 +18,7 @@ class PastRequestsTableViewCell: UITableViewCell {
     @IBOutlet weak var numberOfResponsesLabel: UILabel!
     
     // MARK: - Properties
-    var requestLandingPad: ProfileMockDataModel? {
+    var requestLandingPad: ProfileMockDataModel1? {
         didSet {
             layoutIfNeeded()
             setupView()
