@@ -26,7 +26,16 @@ class RequestFeedViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        activeRequestsFeedTableView.delegate = self
+        activeRequestsFeedTableView.dataSource = self
+        pastRequestsTableView.delegate = self
+        pastRequestsTableView.dataSource = self
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        pastRequestsTableView.reloadData()
     }
     
     // MARK: - Actions
@@ -57,4 +66,87 @@ class RequestFeedViewController: UIViewController {
     }
     */
 
+}
+
+extension RequestFeedViewController: UITableViewDelegate, UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        if tableView == pastRequestsTableView {
+            return ProfileMockDataController.shared.mockDataObjects.count
+        } else {
+            return ProfileMockDataController2.shared.mockDataObjects.count
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        if tableView == pastRequestsTableView {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "activePastRequestCell", for: indexPath) as? PastRequestsTableViewCell else { return UITableViewCell()}
+        
+        let request = ProfileMockDataController.shared.mockDataObjects[indexPath.row]
+        
+        cell.requestLandingPad = request
+        
+        return cell
+        
+        } else {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: "activeRequestCell", for: indexPath) as? ActiveRequestsTableViewCell else { return UITableViewCell()}
+            
+            let request = ProfileMockDataController2.shared.mockDataObjects[indexPath.row]
+            
+            cell.requestLandingPad = request
+            
+            return cell
+        }
+    }
+    
+    
+}
+
+
+// MARK: - Mock Data
+
+class ProfileMockDataModel {
+    let text: String
+    let image: UIImage?
+    
+    init(text: String, image: UIImage?) {
+        self.text = text
+        self.image = image
+    }
+}
+
+class ProfileMockDataController {
+    static let shared = ProfileMockDataController()
+    
+    var mockDataObjects = [ProfileMockDataModel]()
+    
+    init() {
+        
+        let request1 = ProfileMockDataModel(text: "#whatever #amiseeingthings #iphoneForTheWin", image: UIImage(named: "mountain"))
+        let request2 = ProfileMockDataModel(text: "#customTableViews #BadDay #WorkSucks", image: UIImage(named: "focus"))
+        let request3 = ProfileMockDataModel(text: "#DoesItWork #WAterIsLife #RAinbow", image: UIImage(named: "canyonJump"))
+        
+        self.mockDataObjects = [request1, request2, request3]
+    }
+    
+    
+}
+
+class ProfileMockDataController2 {
+    static let shared = ProfileMockDataController()
+    
+    var mockDataObjects = [ProfileMockDataModel]()
+    
+    init() {
+        
+        let request1 = ProfileMockDataModel(text: "#whatever #amiseeingthings #iphoneForTheWin", image: UIImage(named: "mountain"))
+        let request2 = ProfileMockDataModel(text: "#customTableViews #BadDay #WorkSucks", image: UIImage(named: "focus"))
+        let request3 = ProfileMockDataModel(text: "#DoesItWork #WAterIsLife #RAinbow", image: UIImage(named: "canyonJump"))
+        
+        self.mockDataObjects = [request1, request2, request3]
+    }
+    
+    
 }
