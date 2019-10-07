@@ -16,19 +16,17 @@ class ProfileViewCell: UITableViewCell {
     @IBOutlet weak var requestImageView: UIImageView!
     @IBOutlet weak var numberOfResponsesLabel: UILabel!
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        setupViews()
+
+    
+    var request: ProfileMockDataModel? {
+        didSet {
+            setupViews()
+        }
     }
     
-//    var request: Request? {
-//        didSet {
-//            setupViews()
-//        }
-//    }
-    
     func setupViews() {
-        requestTextLabel.text = "This is the text for this request. It's amazing right?!?!?!?"
-        numberOfResponsesLabel.text = "\(33)"
+        requestTextLabel.text = request?.text
+        requestImageView.image = request?.image
+        numberOfResponsesLabel.text = "\(22)"
     }
 }
