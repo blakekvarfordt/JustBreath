@@ -7,8 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63512B6B234B99E10069F3F1 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63512B6A234B99E10069F3F1 /* ProfileViewCell.swift */; };
 		63E8A29A2347979600B0D302 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8A2992347979600B0D302 /* Request.swift */; };
 		63E8A29E2347B30300B0D302 /* RequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8A29D2347B30300B0D302 /* RequestController.swift */; };
+		63E8A2A22347E6E700B0D302 /* DailyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8A2A12347E6E700B0D302 /* DailyController.swift */; };
 		D4A099EE2345111F00B46AA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A099ED2345111F00B46AA0 /* AppDelegate.swift */; };
 		D4A099F02345111F00B46AA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A099EF2345111F00B46AA0 /* SceneDelegate.swift */; };
 		D4A099F52345111F00B46AA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A099F32345111F00B46AA0 /* Main.storyboard */; };
@@ -39,8 +41,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63512B6A234B99E10069F3F1 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		63E8A2992347979600B0D302 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
 		63E8A29D2347B30300B0D302 /* RequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
+		63E8A2A12347E6E700B0D302 /* DailyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyController.swift; sourceTree = "<group>"; };
 		D4A099EA2345111F00B46AA0 /* JustBreateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustBreateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A099ED2345111F00B46AA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		D4A099EF2345111F00B46AA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63512B69234B998B0069F3F1 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				63512B6A234B99E10069F3F1 /* ProfileViewCell.swift */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
 		D4A099E12345111F00B46AA0 = {
 			isa = PBXGroup;
 			children = (
@@ -165,6 +177,7 @@
 				D4E1D9FC2347A30800F1CFA5 /* UserController.swift */,
 				D4E1D9FE2347D91900F1CFA5 /* ResponseController.swift */,
 				63E8A29D2347B30300B0D302 /* RequestController.swift */,
+				63E8A2A12347E6E700B0D302 /* DailyController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -190,6 +203,7 @@
 		FCD584F92347DBD50025B5E2 /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				63512B69234B998B0069F3F1 /* Custom Cells */,
 				FCD585022347DD710025B5E2 /* ProfileViewController.swift */,
 			);
 			path = Profile;
@@ -311,6 +325,7 @@
 				FCD584FF2347DD1B0025B5E2 /* RespondToRequestViewController.swift in Sources */,
 				FCD584FB2347DC5F0025B5E2 /* DailyViewController.swift in Sources */,
 				FCD585032347DD710025B5E2 /* ProfileViewController.swift in Sources */,
+				63E8A2A22347E6E700B0D302 /* DailyController.swift in Sources */,
 				D4A099EE2345111F00B46AA0 /* AppDelegate.swift in Sources */,
 				D4E1D9F723452BED00F1CFA5 /* Daily.swift in Sources */,
 				D4E1D9FD2347A30800F1CFA5 /* UserController.swift in Sources */,
@@ -318,14 +333,12 @@
 				D4E1D9FF2347D91900F1CFA5 /* ResponseController.swift in Sources */,
 				FCDBA2622347B8E700163581 /* WelcomeOnboardingViewController.swift in Sources */,
 				FCD584FD2347DCE50025B5E2 /* RequestFeedViewController.swift in Sources */,
+				63512B6B234B99E10069F3F1 /* ProfileViewCell.swift in Sources */,
 				D4E1D9F52345129B00F1CFA5 /* User.swift in Sources */,
-
 				FCD584F02347DB450025B5E2 /* GoalOnboardingViewController.swift in Sources */,
 				FCD584F62347DBA70025B5E2 /* UsernameOnboardingViewController.swift in Sources */,
 				FCD585062347DE2E0025B5E2 /* MainTabViewController.swift in Sources */,
-
 				63E8A29E2347B30300B0D302 /* RequestController.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

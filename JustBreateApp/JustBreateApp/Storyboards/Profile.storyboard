@@ -41,7 +41,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pastRequestCell" rowHeight="139" id="ELs-qT-VEa">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="pastRequestCell" rowHeight="139" id="ELs-qT-VEa" customClass="ProfileViewCell" customModule="JustBreateApp" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="139"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ELs-qT-VEa" id="xAn-fR-hzI">
@@ -77,6 +77,12 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="numberOfResponsesLabel" destination="dzs-pw-WCa" id="jUW-v9-MUp"/>
+                                            <outlet property="requestImageView" destination="via-jj-2WW" id="utz-Oc-nN2"/>
+                                            <outlet property="requestTextLabel" destination="sMG-1Q-NvV" id="ILM-uU-Nsb"/>
+                                            <outlet property="usernameLabel" destination="aDO-Vo-IVx" id="dif-oo-kAV"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -93,6 +99,11 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Profile" id="thZ-OR-zHa"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="pointsLabel" destination="h8f-wK-78e" id="0Vx-cR-ksj"/>
+                        <outlet property="rankLabel" destination="cz4-lP-xjn" id="qj6-M7-qd4"/>
+                        <outlet property="usernameLabel" destination="lrY-tm-a9F" id="c5z-cw-eUL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="73b-Sv-zPS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
