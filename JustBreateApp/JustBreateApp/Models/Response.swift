@@ -53,7 +53,7 @@ class Response {
         }
     }
     
-    init(username: String, bodyText: String?, image: UIImage, link: URL?, timestamp: Double, responseTags: [String], responseRecordID: CKRecord.ID, requestReference: CKRecord.Reference) {
+    init(username: String, bodyText: String?, image: UIImage?, link: URL?, timestamp: Double = Date().timeIntervalSince1970, responseTags: [String], responseRecordID: CKRecord.ID = CKRecord.ID(recordName: UUID().uuidString), requestReference: CKRecord.Reference) {
         self.username = username
         self.bodyText = bodyText
         self.link = link
@@ -71,7 +71,6 @@ class Response {
             let link = ckRecord[ResponseConstants.linkKey] as? URL?,
             let timestamp = ckRecord[ResponseConstants.timestampKey] as? Double,
             let responseTags = ckRecord[ResponseConstants.responseTagsKey] as? [String],
-            let responseRecordID = ckRecord[ResponseConstants.responseRecordIDKey] as? CKRecord.ID,
             let requestReference = ckRecord[ResponseConstants.requestReferenceKey] as? CKRecord.Reference,
             let imageCkAsset = ckRecord[ResponseConstants.imageAssetKey] as? CKAsset
             else { return nil }
@@ -81,7 +80,7 @@ class Response {
         self.link = link
         self.timestamp = timestamp
         self.responseTags = responseTags
-        self.responseRecordID = responseRecordID
+        self.responseRecordID = ckRecord.recordID
         self.requestReference = requestReference
         
         do {
@@ -103,7 +102,6 @@ extension CKRecord {
         self.setValue(response.link, forKey: ResponseConstants.linkKey)
         self.setValue(response.timestamp, forKey: ResponseConstants.timestampKey)
         self.setValue(response.responseTags, forKey: ResponseConstants.responseTagsKey)
-        self.setValue(response.responseRecordID, forKey: ResponseConstants.responseRecordIDKey)
         self.setValue(response.requestReference, forKey: ResponseConstants.requestReferenceKey)
     }
 }

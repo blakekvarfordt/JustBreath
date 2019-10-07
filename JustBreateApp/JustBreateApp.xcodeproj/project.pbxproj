@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		63512B6B234B99E10069F3F1 /* ProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63512B6A234B99E10069F3F1 /* ProfileViewCell.swift */; };
 		63E8A29A2347979600B0D302 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8A2992347979600B0D302 /* Request.swift */; };
+		63E8A29E2347B30300B0D302 /* RequestController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8A29D2347B30300B0D302 /* RequestController.swift */; };
+		63E8A2A22347E6E700B0D302 /* DailyController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 63E8A2A12347E6E700B0D302 /* DailyController.swift */; };
 		D4A099EE2345111F00B46AA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A099ED2345111F00B46AA0 /* AppDelegate.swift */; };
 		D4A099F02345111F00B46AA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4A099EF2345111F00B46AA0 /* SceneDelegate.swift */; };
 		D4A099F52345111F00B46AA0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A099F32345111F00B46AA0 /* Main.storyboard */; };
@@ -16,11 +19,37 @@
 		D4E1D9F02345116600F1CFA5 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4E1D9EF2345116600F1CFA5 /* CloudKit.framework */; };
 		D4E1D9F52345129B00F1CFA5 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9F42345129B00F1CFA5 /* User.swift */; };
 		D4E1D9F723452BED00F1CFA5 /* Daily.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9F623452BED00F1CFA5 /* Daily.swift */; };
+		D4E1D9FD2347A30800F1CFA5 /* UserController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9FC2347A30800F1CFA5 /* UserController.swift */; };
+		D4E1D9FF2347D91900F1CFA5 /* ResponseController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1D9FE2347D91900F1CFA5 /* ResponseController.swift */; };
+		D4E1DA25234BAB2C00F1CFA5 /* PastDailyEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1DA24234BAB2C00F1CFA5 /* PastDailyEntryViewController.swift */; };
+		D4E1DA27234BD01500F1CFA5 /* DeletePastDailyEntryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4E1DA26234BD01500F1CFA5 /* DeletePastDailyEntryViewController.swift */; };
+		FC53FF05234B9CD600E68EB9 /* PastRequestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53FF04234B9CD600E68EB9 /* PastRequestsTableViewCell.swift */; };
+		FC53FF07234B9CFE00E68EB9 /* ActiveRequestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53FF06234B9CFE00E68EB9 /* ActiveRequestsTableViewCell.swift */; };
+		FC53FF09234BA4CD00E68EB9 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53FF08234BA4CD00E68EB9 /* ResponseTableViewCell.swift */; };
 		FCBF933623451CFF001AD43E /* Response.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCBF933523451CFF001AD43E /* Response.swift */; };
+		FCD584F02347DB450025B5E2 /* GoalOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD584EF2347DB450025B5E2 /* GoalOnboardingViewController.swift */; };
+		FCD584F22347DB650025B5E2 /* HowItWorksOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD584F12347DB650025B5E2 /* HowItWorksOnboardingViewController.swift */; };
+		FCD584F42347DB8F0025B5E2 /* RulesOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD584F32347DB8F0025B5E2 /* RulesOnboardingViewController.swift */; };
+		FCD584F62347DBA70025B5E2 /* UsernameOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD584F52347DBA70025B5E2 /* UsernameOnboardingViewController.swift */; };
+		FCD584FB2347DC5F0025B5E2 /* DailyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD584FA2347DC5F0025B5E2 /* DailyViewController.swift */; };
+		FCD584FD2347DCE50025B5E2 /* RequestFeedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD584FC2347DCE50025B5E2 /* RequestFeedViewController.swift */; };
+		FCD584FF2347DD1B0025B5E2 /* RespondToRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD584FE2347DD1B0025B5E2 /* RespondToRequestViewController.swift */; };
+		FCD585012347DD4E0025B5E2 /* ActiveRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD585002347DD4E0025B5E2 /* ActiveRequestViewController.swift */; };
+		FCD585032347DD710025B5E2 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD585022347DD710025B5E2 /* ProfileViewController.swift */; };
+		FCD585062347DE2E0025B5E2 /* MainTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCD585052347DE2E0025B5E2 /* MainTabViewController.swift */; };
+		FCDBA24F2347AB0900163581 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDBA24E2347AB0900163581 /* Onboarding.storyboard */; };
+		FCDBA2572347AE8600163581 /* TabController.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDBA2562347AE8600163581 /* TabController.storyboard */; };
+		FCDBA25B2347B0B600163581 /* Daily.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDBA25A2347B0B600163581 /* Daily.storyboard */; };
+		FCDBA25D2347B0CD00163581 /* Requests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDBA25C2347B0CD00163581 /* Requests.storyboard */; };
+		FCDBA25F2347B0DA00163581 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDBA25E2347B0DA00163581 /* Profile.storyboard */; };
+		FCDBA2622347B8E700163581 /* WelcomeOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDBA2612347B8E700163581 /* WelcomeOnboardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		63512B6A234B99E10069F3F1 /* ProfileViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewCell.swift; sourceTree = "<group>"; };
 		63E8A2992347979600B0D302 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		63E8A29D2347B30300B0D302 /* RequestController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestController.swift; sourceTree = "<group>"; };
+		63E8A2A12347E6E700B0D302 /* DailyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyController.swift; sourceTree = "<group>"; };
 		D4A099EA2345111F00B46AA0 /* JustBreateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustBreateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A099ED2345111F00B46AA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		D4A099EF2345111F00B46AA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
@@ -32,7 +61,30 @@
 		D4E1D9EF2345116600F1CFA5 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 		D4E1D9F42345129B00F1CFA5 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D4E1D9F623452BED00F1CFA5 /* Daily.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Daily.swift; sourceTree = "<group>"; };
+		D4E1D9FC2347A30800F1CFA5 /* UserController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserController.swift; sourceTree = "<group>"; };
+		D4E1D9FE2347D91900F1CFA5 /* ResponseController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseController.swift; sourceTree = "<group>"; };
+		D4E1DA24234BAB2C00F1CFA5 /* PastDailyEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastDailyEntryViewController.swift; sourceTree = "<group>"; };
+		D4E1DA26234BD01500F1CFA5 /* DeletePastDailyEntryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeletePastDailyEntryViewController.swift; sourceTree = "<group>"; };
+		FC53FF04234B9CD600E68EB9 /* PastRequestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRequestsTableViewCell.swift; sourceTree = "<group>"; };
+		FC53FF06234B9CFE00E68EB9 /* ActiveRequestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRequestsTableViewCell.swift; sourceTree = "<group>"; };
+		FC53FF08234BA4CD00E68EB9 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTableViewCell.swift; sourceTree = "<group>"; };
 		FCBF933523451CFF001AD43E /* Response.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Response.swift; sourceTree = "<group>"; };
+		FCD584EF2347DB450025B5E2 /* GoalOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalOnboardingViewController.swift; sourceTree = "<group>"; };
+		FCD584F12347DB650025B5E2 /* HowItWorksOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HowItWorksOnboardingViewController.swift; sourceTree = "<group>"; };
+		FCD584F32347DB8F0025B5E2 /* RulesOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesOnboardingViewController.swift; sourceTree = "<group>"; };
+		FCD584F52347DBA70025B5E2 /* UsernameOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsernameOnboardingViewController.swift; sourceTree = "<group>"; };
+		FCD584FA2347DC5F0025B5E2 /* DailyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyViewController.swift; sourceTree = "<group>"; };
+		FCD584FC2347DCE50025B5E2 /* RequestFeedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFeedViewController.swift; sourceTree = "<group>"; };
+		FCD584FE2347DD1B0025B5E2 /* RespondToRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RespondToRequestViewController.swift; sourceTree = "<group>"; };
+		FCD585002347DD4E0025B5E2 /* ActiveRequestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRequestViewController.swift; sourceTree = "<group>"; };
+		FCD585022347DD710025B5E2 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		FCD585052347DE2E0025B5E2 /* MainTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabViewController.swift; sourceTree = "<group>"; };
+		FCDBA24E2347AB0900163581 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
+		FCDBA2562347AE8600163581 /* TabController.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TabController.storyboard; sourceTree = "<group>"; };
+		FCDBA25A2347B0B600163581 /* Daily.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Daily.storyboard; sourceTree = "<group>"; };
+		FCDBA25C2347B0CD00163581 /* Requests.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Requests.storyboard; sourceTree = "<group>"; };
+		FCDBA25E2347B0DA00163581 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
+		FCDBA2612347B8E700163581 /* WelcomeOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeOnboardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +99,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		63512B69234B998B0069F3F1 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				63512B6A234B99E10069F3F1 /* ProfileViewCell.swift */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
 		D4A099E12345111F00B46AA0 = {
 			isa = PBXGroup;
 			children = (
@@ -67,6 +127,8 @@
 		D4A099EC2345111F00B46AA0 /* JustBreateApp */ = {
 			isa = PBXGroup;
 			children = (
+				FCDBA2602347B8A200163581 /* View Controllers */,
+				D4E1D9FB2347A2E500F1CFA5 /* Model Controllers */,
 				D4E1D9F32345128E00F1CFA5 /* Models */,
 				D4E1D9F2234511C700F1CFA5 /* Storyboards */,
 				D4E1D9F1234511A300F1CFA5 /* Resources */,
@@ -98,6 +160,11 @@
 			isa = PBXGroup;
 			children = (
 				D4A099F32345111F00B46AA0 /* Main.storyboard */,
+				FCDBA24E2347AB0900163581 /* Onboarding.storyboard */,
+				FCDBA2562347AE8600163581 /* TabController.storyboard */,
+				FCDBA25A2347B0B600163581 /* Daily.storyboard */,
+				FCDBA25C2347B0CD00163581 /* Requests.storyboard */,
+				FCDBA25E2347B0DA00163581 /* Profile.storyboard */,
 				D4A099F82345111F00B46AA0 /* LaunchScreen.storyboard */,
 			);
 			path = Storyboards;
@@ -112,6 +179,89 @@
 				63E8A2992347979600B0D302 /* Request.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		D4E1D9FB2347A2E500F1CFA5 /* Model Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D4E1D9FC2347A30800F1CFA5 /* UserController.swift */,
+				D4E1D9FE2347D91900F1CFA5 /* ResponseController.swift */,
+				63E8A29D2347B30300B0D302 /* RequestController.swift */,
+				63E8A2A12347E6E700B0D302 /* DailyController.swift */,
+			);
+			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		FC53FF03234B98D300E68EB9 /* Custom Cells */ = {
+			isa = PBXGroup;
+			children = (
+				FC53FF04234B9CD600E68EB9 /* PastRequestsTableViewCell.swift */,
+				FC53FF06234B9CFE00E68EB9 /* ActiveRequestsTableViewCell.swift */,
+				FC53FF08234BA4CD00E68EB9 /* ResponseTableViewCell.swift */,
+			);
+			path = "Custom Cells";
+			sourceTree = "<group>";
+		};
+		FCD584F72347DBC70025B5E2 /* Daily */ = {
+			isa = PBXGroup;
+			children = (
+				FCD584FA2347DC5F0025B5E2 /* DailyViewController.swift */,
+				D4E1DA24234BAB2C00F1CFA5 /* PastDailyEntryViewController.swift */,
+				D4E1DA26234BD01500F1CFA5 /* DeletePastDailyEntryViewController.swift */,
+			);
+			path = Daily;
+			sourceTree = "<group>";
+		};
+		FCD584F82347DBCE0025B5E2 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				FC53FF03234B98D300E68EB9 /* Custom Cells */,
+				FCD584FC2347DCE50025B5E2 /* RequestFeedViewController.swift */,
+				FCD584FE2347DD1B0025B5E2 /* RespondToRequestViewController.swift */,
+				FCD585002347DD4E0025B5E2 /* ActiveRequestViewController.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		FCD584F92347DBD50025B5E2 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				63512B69234B998B0069F3F1 /* Custom Cells */,
+				FCD585022347DD710025B5E2 /* ProfileViewController.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
+		FCD585042347DDA90025B5E2 /* Tab View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FCD585052347DE2E0025B5E2 /* MainTabViewController.swift */,
+			);
+			path = "Tab View Controller";
+			sourceTree = "<group>";
+		};
+		FCDBA2602347B8A200163581 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FCDBA2632347BD8400163581 /* Onboarding */,
+				FCD585042347DDA90025B5E2 /* Tab View Controller */,
+				FCD584F72347DBC70025B5E2 /* Daily */,
+				FCD584F82347DBCE0025B5E2 /* Requests */,
+				FCD584F92347DBD50025B5E2 /* Profile */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FCDBA2632347BD8400163581 /* Onboarding */ = {
+			isa = PBXGroup;
+			children = (
+				FCD584F32347DB8F0025B5E2 /* RulesOnboardingViewController.swift */,
+				FCDBA2612347B8E700163581 /* WelcomeOnboardingViewController.swift */,
+				FCD584EF2347DB450025B5E2 /* GoalOnboardingViewController.swift */,
+				FCD584F12347DB650025B5E2 /* HowItWorksOnboardingViewController.swift */,
+				FCD584F52347DBA70025B5E2 /* UsernameOnboardingViewController.swift */,
+			);
+			path = Onboarding;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -174,7 +324,12 @@
 			files = (
 				D4A099FA2345111F00B46AA0 /* LaunchScreen.storyboard in Resources */,
 				D4A099F72345111F00B46AA0 /* Assets.xcassets in Resources */,
+				FCDBA25F2347B0DA00163581 /* Profile.storyboard in Resources */,
+				FCDBA25B2347B0B600163581 /* Daily.storyboard in Resources */,
+				FCDBA25D2347B0CD00163581 /* Requests.storyboard in Resources */,
+				FCDBA2572347AE8600163581 /* TabController.storyboard in Resources */,
 				D4A099F52345111F00B46AA0 /* Main.storyboard in Resources */,
+				FCDBA24F2347AB0900163581 /* Onboarding.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -185,12 +340,33 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FCD585012347DD4E0025B5E2 /* ActiveRequestViewController.swift in Sources */,
+				FCD584F22347DB650025B5E2 /* HowItWorksOnboardingViewController.swift in Sources */,
 				FCBF933623451CFF001AD43E /* Response.swift in Sources */,
+				D4E1DA25234BAB2C00F1CFA5 /* PastDailyEntryViewController.swift in Sources */,
 				63E8A29A2347979600B0D302 /* Request.swift in Sources */,
+				FCD584F42347DB8F0025B5E2 /* RulesOnboardingViewController.swift in Sources */,
+				D4E1DA27234BD01500F1CFA5 /* DeletePastDailyEntryViewController.swift in Sources */,
+				FC53FF07234B9CFE00E68EB9 /* ActiveRequestsTableViewCell.swift in Sources */,
+				FCD584FF2347DD1B0025B5E2 /* RespondToRequestViewController.swift in Sources */,
+				FCD584FB2347DC5F0025B5E2 /* DailyViewController.swift in Sources */,
+				FCD585032347DD710025B5E2 /* ProfileViewController.swift in Sources */,
+				63E8A2A22347E6E700B0D302 /* DailyController.swift in Sources */,
 				D4A099EE2345111F00B46AA0 /* AppDelegate.swift in Sources */,
+				FC53FF09234BA4CD00E68EB9 /* ResponseTableViewCell.swift in Sources */,
 				D4E1D9F723452BED00F1CFA5 /* Daily.swift in Sources */,
+				D4E1D9FD2347A30800F1CFA5 /* UserController.swift in Sources */,
 				D4A099F02345111F00B46AA0 /* SceneDelegate.swift in Sources */,
+				D4E1D9FF2347D91900F1CFA5 /* ResponseController.swift in Sources */,
+				FCDBA2622347B8E700163581 /* WelcomeOnboardingViewController.swift in Sources */,
+				FCD584FD2347DCE50025B5E2 /* RequestFeedViewController.swift in Sources */,
+				63512B6B234B99E10069F3F1 /* ProfileViewCell.swift in Sources */,
 				D4E1D9F52345129B00F1CFA5 /* User.swift in Sources */,
+				FCD584F02347DB450025B5E2 /* GoalOnboardingViewController.swift in Sources */,
+				FC53FF05234B9CD600E68EB9 /* PastRequestsTableViewCell.swift in Sources */,
+				FCD584F62347DBA70025B5E2 /* UsernameOnboardingViewController.swift in Sources */,
+				FCD585062347DE2E0025B5E2 /* MainTabViewController.swift in Sources */,
+				63E8A29E2347B30300B0D302 /* RequestController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
