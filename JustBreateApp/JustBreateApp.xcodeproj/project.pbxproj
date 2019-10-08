@@ -33,6 +33,8 @@
 		FC492F38234CEC6600969E17 /* FlagPostAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC492F37234CEC6600969E17 /* FlagPostAlertViewController.swift */; };
 		FC492F3A234CEC7600969E17 /* BlockUserAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC492F39234CEC7600969E17 /* BlockUserAlertViewController.swift */; };
 		FC492F3C234CEC8400969E17 /* BookmarkResponseAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC492F3B234CEC8400969E17 /* BookmarkResponseAlertViewController.swift */; };
+		FC492F3E234CF0D700969E17 /* RulesAlert.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FC492F3D234CF0D700969E17 /* RulesAlert.storyboard */; };
+		FC492F40234CF0EC00969E17 /* RulesAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC492F3F234CF0EC00969E17 /* RulesAlertViewController.swift */; };
 		FC53FF05234B9CD600E68EB9 /* PastRequestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53FF04234B9CD600E68EB9 /* PastRequestsTableViewCell.swift */; };
 		FC53FF07234B9CFE00E68EB9 /* ActiveRequestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53FF06234B9CFE00E68EB9 /* ActiveRequestsTableViewCell.swift */; };
 		FC53FF09234BA4CD00E68EB9 /* ResponseTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC53FF08234BA4CD00E68EB9 /* ResponseTableViewCell.swift */; };
@@ -85,6 +87,8 @@
 		FC492F37234CEC6600969E17 /* FlagPostAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlagPostAlertViewController.swift; sourceTree = "<group>"; };
 		FC492F39234CEC7600969E17 /* BlockUserAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockUserAlertViewController.swift; sourceTree = "<group>"; };
 		FC492F3B234CEC8400969E17 /* BookmarkResponseAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookmarkResponseAlertViewController.swift; sourceTree = "<group>"; };
+		FC492F3D234CF0D700969E17 /* RulesAlert.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = RulesAlert.storyboard; sourceTree = "<group>"; };
+		FC492F3F234CF0EC00969E17 /* RulesAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RulesAlertViewController.swift; sourceTree = "<group>"; };
 		FC53FF04234B9CD600E68EB9 /* PastRequestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastRequestsTableViewCell.swift; sourceTree = "<group>"; };
 		FC53FF06234B9CFE00E68EB9 /* ActiveRequestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActiveRequestsTableViewCell.swift; sourceTree = "<group>"; };
 		FC53FF08234BA4CD00E68EB9 /* ResponseTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseTableViewCell.swift; sourceTree = "<group>"; };
@@ -184,6 +188,7 @@
 				FCDBA2562347AE8600163581 /* TabController.storyboard */,
 				FCDBA25A2347B0B600163581 /* Daily.storyboard */,
 				FCDBA25C2347B0CD00163581 /* Requests.storyboard */,
+				FC492F3D234CF0D700969E17 /* RulesAlert.storyboard */,
 				FC492F2D234CEB7300969E17 /* FavoriteResponseAlert.storyboard */,
 				FC492F2F234CEB9C00969E17 /* FlagPostAlert.storyboard */,
 				FC492F31234CEBB000969E17 /* BlockUserAlert.storyboard */,
@@ -249,6 +254,7 @@
 				FC492F37234CEC6600969E17 /* FlagPostAlertViewController.swift */,
 				FC492F39234CEC7600969E17 /* BlockUserAlertViewController.swift */,
 				FC492F3B234CEC8400969E17 /* BookmarkResponseAlertViewController.swift */,
+				FC492F3F234CF0EC00969E17 /* RulesAlertViewController.swift */,
 			);
 			path = Requests;
 			sourceTree = "<group>";
@@ -355,6 +361,7 @@
 				FC492F2E234CEB7300969E17 /* FavoriteResponseAlert.storyboard in Resources */,
 				FC492F34234CEBCF00969E17 /* BookmarkResponseAlert.storyboard in Resources */,
 				D4A099FA2345111F00B46AA0 /* LaunchScreen.storyboard in Resources */,
+				FC492F3E234CF0D700969E17 /* RulesAlert.storyboard in Resources */,
 				FC492F30234CEB9C00969E17 /* FlagPostAlert.storyboard in Resources */,
 				D4E5E7D8234CD8C9002F7115 /* CreateRequest.storyboard in Resources */,
 				D4A099F72345111F00B46AA0 /* Assets.xcassets in Resources */,
@@ -394,6 +401,7 @@
 				FC53FF09234BA4CD00E68EB9 /* ResponseTableViewCell.swift in Sources */,
 				D4E1D9F723452BED00F1CFA5 /* Daily.swift in Sources */,
 				D4E1D9FD2347A30800F1CFA5 /* UserController.swift in Sources */,
+				FC492F40234CF0EC00969E17 /* RulesAlertViewController.swift in Sources */,
 				D4A099F02345111F00B46AA0 /* SceneDelegate.swift in Sources */,
 				D4E1D9FF2347D91900F1CFA5 /* ResponseController.swift in Sources */,
 				FCDBA2622347B8E700163581 /* WelcomeOnboardingViewController.swift in Sources */,
