@@ -21,7 +21,19 @@ class UsernameOnboardingViewController: UIViewController {
         view.addGestureRecognizer(tap)
     }
     
+    // MARK: - Methods
     @objc func tapResign() {
         createUsernameTextField.resignFirstResponder()
+    }
+    
+    @IBAction func nextButtonTapped(_ sender: Any) {
+        guard let username = createUsernameTextField.text, createUsernameTextField.text != nil else { return }
+        UserController.shared.createUser(username: username) { (success) in
+            if success {
+                print("User created.")
+            } else {
+                print("User was not created.")
+            }
+        }
     }
 }
