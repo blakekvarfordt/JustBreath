@@ -16,12 +16,21 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var pastRequestsTableView: UITableView!
     
+    // MARK: - Properties
+    var points = 1000
+    
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         pastRequestsTableView.delegate = self
         pastRequestsTableView.dataSource = self
         setupViews()
+        if points == 1000 {
+            guard let viewController = UIStoryboard(name: "PointsAndRank", bundle: nil).instantiateViewController(withIdentifier: "pointsAndRankStoryBoard") as? PointsAndRankVC else { return }
+            self.present(viewController, animated: true, completion: nil)
+            
+            points += 5
+        }
     }
     
     
