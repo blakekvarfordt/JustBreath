@@ -80,10 +80,14 @@ class UserController {
             }
             
             if let userRecord = userRecord {
-                let foundUser = User(ckRecord: userRecord[0])
-                self.currentUser = foundUser
-                print("Got User")
-                completion(true)
+                if userRecord.count > 0 {
+                    let foundUser = User(ckRecord: userRecord[0])
+                    self.currentUser = foundUser
+                    print("Got User")
+                    completion(true)
+                } else {
+                    completion(false)
+                }
             }
         }
     }
