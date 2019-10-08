@@ -292,6 +292,7 @@
                                                             <state key="normal" title="Fire" image="flame.fill" catalog="system"/>
                                                             <connections>
                                                                 <action selector="favoriteResponseButtonTapped:" destination="sxY-ax-Vrb" eventType="touchUpInside" id="4LK-VP-fHX"/>
+                                                                <segue destination="BMW-HP-V4b" kind="show" id="iZJ-CJ-0of"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XbA-4x-lrI">
@@ -299,6 +300,7 @@
                                                             <state key="normal" title="Flag" image="flag.fill" catalog="system"/>
                                                             <connections>
                                                                 <action selector="flagResponseButtonTapped:" destination="sxY-ax-Vrb" eventType="touchUpInside" id="2su-fG-Z9h"/>
+                                                                <segue destination="eGy-Vo-br5" kind="show" id="036-k3-mLK"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dNb-JM-Pjy">
@@ -306,6 +308,7 @@
                                                             <state key="normal" title="B" image="nosign" catalog="system"/>
                                                             <connections>
                                                                 <action selector="blockUserButtonTapped:" destination="sxY-ax-Vrb" eventType="touchUpInside" id="ToQ-gM-Was"/>
+                                                                <segue destination="SRo-gA-4l6" kind="show" id="VOK-he-aEc"/>
                                                             </connections>
                                                         </button>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RjM-8k-6RH">
@@ -314,6 +317,7 @@
                                                             <state key="normal" title="BM" image="bookmark.fill" catalog="system"/>
                                                             <connections>
                                                                 <action selector="bookmarkResponseButtonTapped:" destination="sxY-ax-Vrb" eventType="touchUpInside" id="fhO-VD-xSc"/>
+                                                                <segue destination="V1F-eq-yfE" kind="show" id="468-fy-Z2h"/>
                                                             </connections>
                                                         </button>
                                                     </subviews>
@@ -407,6 +411,46 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RN0-1U-eQa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="139" y="1083"/>
+        </scene>
+        <!--FavoriteResponseAlert-->
+        <scene sceneID="BhO-GT-1Dk">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FavoriteResponseAlert" id="BMW-HP-V4b" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mR4-XJ-3BR"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nXt-pG-grq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1227" y="1117"/>
+        </scene>
+        <!--FlagPostAlert-->
+        <scene sceneID="ayX-b1-wxQ">
+            <objects>
+                <viewControllerPlaceholder storyboardName="FlagPostAlert" id="eGy-Vo-br5" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="T8a-fr-gtH"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="S3Z-3Z-Hcx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="1170"/>
+        </scene>
+        <!--BlockUserAlert-->
+        <scene sceneID="XWc-Fa-JYY">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BlockUserAlert" id="SRo-gA-4l6" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4FE-cW-TL3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1cr-93-ydo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="1229"/>
+        </scene>
+        <!--BookmarkResponseAlert-->
+        <scene sceneID="KAm-vI-Ey2">
+            <objects>
+                <viewControllerPlaceholder storyboardName="BookmarkResponseAlert" id="V1F-eq-yfE" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="KiI-4Z-LzA"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="tIp-d0-5gv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1229" y="1284"/>
         </scene>
         <!--Respond To Request View Controller-->
         <scene sceneID="zpZ-vd-OnY">
