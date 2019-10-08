@@ -560,6 +560,7 @@
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Zvv-8F-MhC" firstAttribute="width" secondItem="QNT-hX-K9j" secondAttribute="width" multiplier="0.7" id="5Hu-P3-GaZ"/>
                             <constraint firstItem="ScR-QF-cjQ" firstAttribute="centerX" secondItem="9D6-hD-09d" secondAttribute="centerX" id="81e-cS-r0T"/>

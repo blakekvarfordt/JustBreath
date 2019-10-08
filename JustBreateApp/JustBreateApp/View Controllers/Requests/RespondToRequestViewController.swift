@@ -37,6 +37,12 @@ class RespondToRequestViewController: UIViewController {
         super.viewDidLoad()
 
         addLinkTextField.isHidden = true
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        
+        let tap = UITapGestureRecognizer()
+        tap.addTarget(self, action: #selector(tapResign))
+        view.addGestureRecognizer(tap)
     }
     
     // MARK: - Actions
@@ -63,6 +69,16 @@ class RespondToRequestViewController: UIViewController {
     
     // MARK: - UI Adjustments
 
+    
+    @objc func tapResign() {
+        view.frame.origin.y = 0
+        responseTextView.resignFirstResponder()
+        addLinkTextField.resignFirstResponder()
+    }
+    
+    @objc func keyboardWillShow() {
+        view.frame.origin.y = -(view.frame.height / 3.5)
+    }
 
 
     
