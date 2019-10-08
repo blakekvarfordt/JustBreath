@@ -24,6 +24,8 @@ class PastDailyEntryViewController: UIViewController {
         pastDailyEntryImageView.image = randomImages.randomElement()
     }
     
+    // Hello
+    
     // MARK: - Methods
     @objc func tapResign() {
         pastDailyEntryTextView.resignFirstResponder()
