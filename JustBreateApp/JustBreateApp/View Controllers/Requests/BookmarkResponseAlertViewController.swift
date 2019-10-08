@@ -10,12 +10,29 @@ import UIKit
 
 class BookmarkResponseAlertViewController: UIViewController {
 
+    // MARK: - Outlets
+    
+    // MARK: - Lifecycle Methods
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
     
+    // MARK: - Actions
+    @IBAction func dismissButtonTapped(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
+    
+    // MARK: - Custom Methods
+    
+    
+    // MARK: - UI Adjustments
+
+
+
 
     /*
     // MARK: - Navigation
