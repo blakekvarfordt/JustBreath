@@ -15,8 +15,6 @@ class DailyViewController: UIViewController {
     @IBOutlet weak var pastEntriesTableView: UITableView!
     @IBOutlet weak var dailyEntryTextView: UITextView!
     
-    
-    
     // MARK: - Properties
         /// MOCK DATA
         let pastDailyEntries = ["OCT 3, 2019", "OCT 2, 2019", "OCT 1, 2019", "SEP 27, 2019", "SEP 26, 2019", "SEP 24, 2019", "SEP 22, 2019", "SEP 21, 2019"]
@@ -30,10 +28,11 @@ class DailyViewController: UIViewController {
         dailyImageView.image = randomImages.randomElement()
         dailyImageView.contentMode = .scaleAspectFill
         let tap = UITapGestureRecognizer()
+        tap.cancelsTouchesInView = false
         tap.addTarget(self, action: #selector(tapResign))
         view.addGestureRecognizer(tap)
     }
-    
+
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.pastEntriesTableView.reloadData()
@@ -48,21 +47,9 @@ class DailyViewController: UIViewController {
     @IBAction func refreshButtonTapped(_ sender: Any) {
         dailyImageView.image = randomImages.randomElement()
     }
-    
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
+// MARK: - Extensions
 extension DailyViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
