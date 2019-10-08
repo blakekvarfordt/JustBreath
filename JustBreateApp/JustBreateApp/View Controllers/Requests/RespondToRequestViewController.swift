@@ -45,6 +45,11 @@ class RespondToRequestViewController: UIViewController {
     }
     
     @IBAction func addLinkButtonTapped(_ sender: Any) {
+        if addLinkTextField.isHidden == false {
+            addLinkTextField.isHidden = true
+        } else if addLinkTextField.isHidden == true {
+            addLinkTextField.isHidden = false
+        }
     }
     
     @IBAction func addImageButtonTapped(_ sender: Any) {
