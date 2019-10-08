@@ -11,8 +11,6 @@ import UIKit
 class ActiveRequestViewController: UIViewController {
 
     // MARK: - Outlets
-    
-    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var tagsLabel: UILabel!
     @IBOutlet weak var requestImageView: UIImageView!
     @IBOutlet weak var numberOfResponsesLabel: UILabel!
