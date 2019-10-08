@@ -55,7 +55,7 @@
                             </stackView>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Explain what you want/need..." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Bpt-mP-5PJ">
                                 <rect key="frame" x="20.5" y="330.5" width="373" height="378.5"/>
-                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="separatorColor" red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.28999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -86,6 +86,14 @@
                         <viewLayoutGuide key="safeArea" id="BCK-Of-4bU"/>
                     </view>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
+                    <connections>
+                        <outlet property="hashtagTextField1" destination="hPX-zh-C7A" id="gac-g6-JMv"/>
+                        <outlet property="hashtagTextField2" destination="Y6E-57-hkQ" id="byz-PJ-EbL"/>
+                        <outlet property="hashtagTextField3" destination="3OD-bX-8hp" id="63L-Tf-Sui"/>
+                        <outlet property="requestButton" destination="P8g-kn-cvE" id="Tcx-g5-sAb"/>
+                        <outlet property="requestTextView" destination="Bpt-mP-5PJ" id="qOT-eH-zfp"/>
+                        <outlet property="usernameLabel" destination="DEH-c9-ksa" id="DRC-zf-1Jk"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NwO-a6-R9r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

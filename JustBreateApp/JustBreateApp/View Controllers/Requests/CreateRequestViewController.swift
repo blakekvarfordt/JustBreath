@@ -9,13 +9,33 @@
 import UIKit
 
 class CreateRequestViewController: UIViewController {
-
+    
+    // MARK: - Outlets
+    
+    @IBOutlet weak var usernameLabel: UILabel!
+    @IBOutlet weak var hashtagTextField1: UITextField!
+    @IBOutlet weak var hashtagTextField2: UITextField!
+    @IBOutlet weak var hashtagTextField3: UITextField!
+    @IBOutlet weak var requestTextView: UITextView!
+    @IBOutlet weak var requestButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        createTapGesture()
     }
     
+    func createTapGesture() {
+        let tap = UITapGestureRecognizer()
+        tap.addTarget(self, action: #selector(tapResign))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func tapResign() {
+        hashtagTextField1.resignFirstResponder()
+        hashtagTextField2.resignFirstResponder()
+        hashtagTextField3.resignFirstResponder()
+        requestTextView.resignFirstResponder()
+    }
 
     /*
     // MARK: - Navigation
