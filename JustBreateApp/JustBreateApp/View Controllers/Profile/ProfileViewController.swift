@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ProfileViewController: UIViewController {
     
@@ -41,9 +42,15 @@ class ProfileViewController: UIViewController {
     }
 
     
-    // MARK: - Navigation
-
+    // MARK: - Actions
+    @IBAction func profileOptionsButtonTapped(_ sender: Any) {
+        guard let url = URL(string: "https://cameronstuart.com/zo-support") else { return }
+        let svc = SFSafariViewController(url: url)
+        present(svc, animated: true)
+    }
     
+    
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }
