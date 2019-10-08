@@ -109,6 +109,7 @@
                                                 <state key="normal" title="Rules"/>
                                                 <connections>
                                                     <action selector="rulesButtonTapped:" destination="ZYU-C9-2hr" eventType="touchUpInside" id="UBb-Rt-b1j"/>
+                                                    <segue destination="Jkj-ue-n64" kind="show" id="ZiV-Jq-ykV"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -634,7 +635,17 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q5h-Gw-TN9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="985" y="464"/>
+            <point key="canvasLocation" x="371" y="366"/>
+        </scene>
+        <!--RulesAlert-->
+        <scene sceneID="nKe-G2-cfM">
+            <objects>
+                <viewControllerPlaceholder storyboardName="RulesAlert" id="Jkj-ue-n64" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Oda-G0-opt"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7OG-4s-dND" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="402" y="329"/>
         </scene>
     </scenes>
     <resources>
