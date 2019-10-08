@@ -307,6 +307,9 @@ To encourage sincerty, please do not use any personal identifiers.</string>
                         <viewLayoutGuide key="safeArea" id="X9y-7O-6tp"/>
                     </view>
                     <navigationItem key="navigationItem" id="Rqi-N0-9iS"/>
+                    <connections>
+                        <outlet property="createUsernameTextField" destination="cpg-NZ-sYh" id="Jqa-7o-oEF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPs-Il-5Fc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

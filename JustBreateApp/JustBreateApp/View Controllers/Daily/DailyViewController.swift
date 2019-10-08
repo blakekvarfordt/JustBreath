@@ -13,6 +13,8 @@ class DailyViewController: UIViewController {
     // MARK: - Outlets
     @IBOutlet weak var dailyImageView: UIImageView!
     @IBOutlet weak var pastEntriesTableView: UITableView!
+    @IBOutlet weak var dailyEntryTextView: UITextView!
+    
     
     
     // MARK: - Properties
@@ -27,11 +29,19 @@ class DailyViewController: UIViewController {
         pastEntriesTableView.dataSource = self
         dailyImageView.image = randomImages.randomElement()
         dailyImageView.contentMode = .scaleAspectFill
+        let tap = UITapGestureRecognizer()
+        tap.addTarget(self, action: #selector(tapResign))
+        view.addGestureRecognizer(tap)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         self.pastEntriesTableView.reloadData()
+    }
+    
+    // MARK: - Methods
+    @objc func tapResign() {
+        dailyEntryTextView.resignFirstResponder()
     }
     
     // MARK: - Actions
