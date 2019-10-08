@@ -65,7 +65,7 @@
 		63E8A2A12347E6E700B0D302 /* DailyController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DailyController.swift; sourceTree = "<group>"; };
 		63F1E1E5234CE4BE00317A26 /* PointsAndRank.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = PointsAndRank.storyboard; sourceTree = "<group>"; };
 		63F1E1E8234CEC1A00317A26 /* PointsAndRankVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsAndRankVC.swift; sourceTree = "<group>"; };
-		D4A099EA2345111F00B46AA0 /* JustBreateApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JustBreateApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D4A099EA2345111F00B46AA0 /* Zō.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Zō.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4A099ED2345111F00B46AA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		D4A099EF2345111F00B46AA0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SceneDelegate.swift; path = ../SceneDelegate.swift; sourceTree = "<group>"; };
 		D4A099F42345111F00B46AA0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -153,7 +153,7 @@
 		D4A099EB2345111F00B46AA0 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D4A099EA2345111F00B46AA0 /* JustBreateApp.app */,
+				D4A099EA2345111F00B46AA0 /* Zō.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -328,7 +328,7 @@
 			);
 			name = JustBreateApp;
 			productName = JustBreateApp;
-			productReference = D4A099EA2345111F00B46AA0 /* JustBreateApp.app */;
+			productReference = D4A099EA2345111F00B46AA0 /* Zō.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -581,8 +581,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CameronStuart.JustBreateApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CameronStuart.Zo;
+				PRODUCT_NAME = "Zō";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -602,8 +602,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.CameronStuart.JustBreateApp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.CameronStuart.Zo;
+				PRODUCT_NAME = "Zō";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
