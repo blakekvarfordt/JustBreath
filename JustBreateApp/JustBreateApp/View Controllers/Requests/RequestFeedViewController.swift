@@ -44,16 +44,29 @@ class RequestFeedViewController: UIViewController {
         pastRequestsTableView.reloadData()
     }
     
+    // MARK: - Custom Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toViewActivePastRequest" {
+            if let index = pastRequestsTableView.indexPathForSelectedRow {
+                guard let destinationVC = segue.destination as? ActiveRequestViewController else { return }
+                let requestToSend = RequestController.shared.requests[index.row]
+                destinationVC.request = requestToSend
+            }
+        } else if segue.identifier == "toResponseToRequest" {
+            if let index = pastRequestsTableView.indexPathForSelectedRow {
+                guard let destinationVC = segue.destination as? RespondToRequestViewController else { return }
+                let requestToSend = RequestController.shared.requests[index.row]
+                destinationVC.request = requestToSend
+            }
+        }
+    }
+    
     // MARK: - Actions
     @IBAction func rulesButtonTapped(_ sender: Any) {
     }
     
     @IBAction func addNewRequestButtonTapped(_ sender: Any) {
     }
-    
-    
-    // MARK: - Custom Methods
-    
     
     // MARK: - UI Adjustments
 }
