@@ -56,6 +56,7 @@
 		FCDBA25D2347B0CD00163581 /* Requests.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDBA25C2347B0CD00163581 /* Requests.storyboard */; };
 		FCDBA25F2347B0DA00163581 /* Profile.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FCDBA25E2347B0DA00163581 /* Profile.storyboard */; };
 		FCDBA2622347B8E700163581 /* WelcomeOnboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCDBA2612347B8E700163581 /* WelcomeOnboardingViewController.swift */; };
+		FCF0F7BA234E462500BDB76F /* ChakraController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FCF0F7B9234E462500BDB76F /* ChakraController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -111,6 +112,7 @@
 		FCDBA25C2347B0CD00163581 /* Requests.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Requests.storyboard; sourceTree = "<group>"; };
 		FCDBA25E2347B0DA00163581 /* Profile.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Profile.storyboard; sourceTree = "<group>"; };
 		FCDBA2612347B8E700163581 /* WelcomeOnboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeOnboardingViewController.swift; sourceTree = "<group>"; };
+		FCF0F7B9234E462500BDB76F /* ChakraController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChakraController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +231,7 @@
 				D4E1D9FE2347D91900F1CFA5 /* ResponseController.swift */,
 				63E8A29D2347B30300B0D302 /* RequestController.swift */,
 				63E8A2A12347E6E700B0D302 /* DailyController.swift */,
+				FCF0F7B9234E462500BDB76F /* ChakraController.swift */,
 			);
 			path = "Model Controllers";
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				63512B6B234B99E10069F3F1 /* ProfileViewCell.swift in Sources */,
 				FC492F36234CEC5400969E17 /* FavoriteResponseAlertViewController.swift in Sources */,
 				D4E1D9F52345129B00F1CFA5 /* User.swift in Sources */,
+				FCF0F7BA234E462500BDB76F /* ChakraController.swift in Sources */,
 				FC53FF05234B9CD600E68EB9 /* PastRequestsTableViewCell.swift in Sources */,
 				FCD584F62347DBA70025B5E2 /* UsernameOnboardingViewController.swift in Sources */,
 				FCD585062347DE2E0025B5E2 /* MainTabViewController.swift in Sources */,

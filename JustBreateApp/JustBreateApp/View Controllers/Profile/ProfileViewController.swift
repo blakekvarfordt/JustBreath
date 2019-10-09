@@ -18,7 +18,8 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var pastRequestsTableView: UITableView!
     
     // MARK: - Properties
-    var points = 1000
+    let currentUser = UserController.shared.currentUser
+    var points = 20000
     
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
@@ -26,7 +27,10 @@ class ProfileViewController: UIViewController {
         pastRequestsTableView.delegate = self
         pastRequestsTableView.dataSource = self
         setupViews()
-        if points == 1000 {
+        
+        guard let currentUser = currentUser else { return }
+        currentUser.kpPoints = points
+        if points == 20000 {
             guard let viewController = UIStoryboard(name: "PointsAndRank", bundle: nil).instantiateViewController(withIdentifier: "pointsAndRankStoryBoard") as? PointsAndRankVC else { return }
             self.present(viewController, animated: true, completion: nil)
             
