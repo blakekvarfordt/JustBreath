@@ -11,7 +11,7 @@ import CloudKit
 
 struct RequestConstants {
    static let usernameKey = "Username"
-    static let titleKey = "Titlt"
+    static let titleKey = "Title"
     static let bodyKey = "Body"
     static let tagsKey = "Tags"
     static let timestampKey = "Timestamp"
