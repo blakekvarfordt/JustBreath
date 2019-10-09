@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CloudKit
 
 class RespondToRequestViewController: UIViewController {
 
@@ -29,6 +30,13 @@ class RespondToRequestViewController: UIViewController {
     @IBOutlet weak var addLinkTextField: UITextField!
     @IBOutlet weak var sendButton: UIButton!
     
+    
+    // MARK: - Properties
+    var request: Request? {
+        didSet {
+            setupViews()
+        }
+    }
     
     // MARK: - Lifecycle Methods
 
@@ -62,9 +70,30 @@ class RespondToRequestViewController: UIViewController {
     }
     
     @IBAction func sendButtonTapped(_ sender: Any) {
+        guard let currentUser = UserController.shared.currentUser,
+            let request = request,
+            let link = addLinkTextField.text,
+            let linkURL = URL(string: link),
+            let bodyText = requestBodyLabel.text, !bodyText.isEmpty else { return }
+        let requestReference = CKRecord.Reference(recordID: request.recordID, action: .deleteSelf)
+        ResponseController.shared.createResponse(username: currentUser.username, bodyText: bodyText, link: linkURL, image: nil, responseTags: request.tags, requestReference: requestReference) { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.navigationController?.popViewController(animated: true)
+                }
+            }
+        }
     }
     
     // MARK: - Custom Methods
+    func setupViews() {
+        loadViewIfNeeded()
+        usernameLabel.text = request?.username
+        numberOfResponsesLabel.text = "\(ResponseController.shared.responses.count)"
+        requestBodyLabel.text = request?.body
+        
+        
+    }
     
     
     // MARK: - UI Adjustments

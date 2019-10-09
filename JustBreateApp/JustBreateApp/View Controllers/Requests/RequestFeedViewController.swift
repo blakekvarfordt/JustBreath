@@ -53,7 +53,7 @@ class RequestFeedViewController: UIViewController {
                 destinationVC.request = requestToSend
             }
         } else if segue.identifier == "toResponseToRequest" {
-            if let index = pastRequestsTableView.indexPathForSelectedRow {
+            if let index = activeRequestsFeedTableView.indexPathForSelectedRow {
                 guard let destinationVC = segue.destination as? RespondToRequestViewController else { return }
                 let requestToSend = RequestController.shared.requests[index.row]
                 destinationVC.request = requestToSend
