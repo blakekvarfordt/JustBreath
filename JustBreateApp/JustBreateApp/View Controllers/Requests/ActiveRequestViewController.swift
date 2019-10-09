@@ -18,6 +18,9 @@ class ActiveRequestViewController: UIViewController {
     
     @IBOutlet weak var responsesTableView: UITableView!
     
+    // MARK: - Properties
+    var request: Request?
+    
     // MARK: - Lifecycle Methods
 
     override func viewDidLoad() {
