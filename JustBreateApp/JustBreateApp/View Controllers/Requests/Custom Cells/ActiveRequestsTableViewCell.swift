@@ -11,24 +11,22 @@ import UIKit
 class ActiveRequestsTableViewCell: UITableViewCell {
 
     // MARK: - Outlets
-
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var requestBodyLabel: UILabel!
     @IBOutlet weak var requestImageView: UIImageView!
     @IBOutlet weak var numberOfResponsesLabel: UILabel!
     
     // MARK: - Properties
-    
     var requestLandingPad: Request? {
         didSet {
             layoutIfNeeded()
             setupView()
         }
     }
+    var imagesArray = [#imageLiteral(resourceName: "canyonJump"), #imageLiteral(resourceName: "difficultRoads"), #imageLiteral(resourceName: "focus"), #imageLiteral(resourceName: "mountain")]
 
     
     // MARK: - Lifecycle Methods
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -36,8 +34,6 @@ class ActiveRequestsTableViewCell: UITableViewCell {
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
 
     // MARK: - Actions
@@ -48,9 +44,10 @@ class ActiveRequestsTableViewCell: UITableViewCell {
     
     // MARK: - UI Adjustments
     func setupView() {
-        usernameLabel.text = "Username"
-        requestBodyLabel.text = "Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda."
-        //requestImageView.image = requestLandingPad?.image
-        numberOfResponsesLabel.text = "7"
+        guard let request = requestLandingPad else { return }
+        usernameLabel.text = request.username
+        requestBodyLabel.text = request.body
+        requestImageView.image = imagesArray.randomElement()
+        numberOfResponsesLabel.text = "\(request.responseCount)"
     }
 }

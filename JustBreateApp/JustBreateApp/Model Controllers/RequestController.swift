@@ -14,6 +14,7 @@ class RequestController {
     static let shared = RequestController()
     
     var requests: [Request] = []
+    var myRequests: [Request] = []
     
     let publicDataBase = CKContainer.default().publicCloudDatabase
     
@@ -51,6 +52,8 @@ class RequestController {
             }
             
             guard let records = records else { completion(false); return }
+            
+            
             let requests = records.compactMap({Request(ckRecord: $0)})
             
             var filteredRequests: [Request] = []
