@@ -114,6 +114,7 @@
                     <tabBarItem key="tabBarItem" title="Daily" id="tUI-IU-1Cc"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics" translucent="NO"/>
                     <connections>
+                        <outlet property="dailyEntryTextView" destination="Kcx-CL-EvJ" id="7rn-6k-iK3"/>
                         <outlet property="dailyImageView" destination="evc-jl-zGb" id="2ET-NC-EaI"/>
                         <outlet property="pastEntriesTableView" destination="ipr-91-xD1" id="lil-6S-UN9"/>
                     </connections>
@@ -183,6 +184,7 @@
                     </view>
                     <connections>
                         <outlet property="pastDailyEntryImageView" destination="XMu-bp-S8I" id="xC8-LV-BuU"/>
+                        <outlet property="pastDailyEntryTextView" destination="lD8-xg-n7v" id="YlL-q8-4Wm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="No1-F4-eFy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -225,7 +227,7 @@
                                 </connections>
                             </button>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="Soq-7l-WYb"/>
                     </view>
                     <navigationItem key="navigationItem" id="jnn-fQ-fj8"/>

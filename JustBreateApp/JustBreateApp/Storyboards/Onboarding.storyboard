@@ -10,7 +10,7 @@
         <!--Welcome Onboarding View Controller-->
         <scene sceneID="Oud-iJ-K0O">
             <objects>
-                <viewController storyboardIdentifier="Onboarding" id="Of8-3R-H7a" customClass="WelcomeOnboardingViewController" customModule="JustBreateApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Onboarding" id="Of8-3R-H7a" customClass="WelcomeOnboardingViewController" customModule="Zō" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="o5W-RQ-Obj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -66,57 +66,10 @@
             </objects>
             <point key="canvasLocation" x="-58" y="113"/>
         </scene>
-        <!--Goal Onboarding View Controller-->
-        <scene sceneID="wDp-Fi-iiA">
-            <objects>
-                <viewController modalPresentationStyle="fullScreen" id="OzG-6h-bAN" customClass="GoalOnboardingViewController" customModule="JustBreateApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="QFD-u6-SzC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="* used to help you stay motivated and focused on what you are serching for." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E8B-hA-X0z">
-                                <rect key="frame" x="38" y="588" width="317" height="73"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJQ-Pm-0zm">
-                                <rect key="frame" x="174" y="267" width="67" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="To Inspire"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j1z-5d-WNg">
-                                <rect key="frame" x="169" y="317" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Be Inspired"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xo0-AU-trU">
-                                <rect key="frame" x="191" y="723" width="32" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Next"/>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="What is your goal?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O0r-AP-Rp3">
-                                <rect key="frame" x="137" y="175" width="141" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="UUI-El-EyV"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ZAu-DP-piD"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="M2y-Ki-WQV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="740.57971014492762" y="112.5"/>
-        </scene>
         <!--How It Works Onboarding View Controller-->
         <scene sceneID="6Nu-wc-wm9">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="CcM-Ed-fiT" customClass="HowItWorksOnboardingViewController" customModule="JustBreateApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="CcM-Ed-fiT" customClass="HowItWorksOnboardingViewController" customModule="Zō" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="a7I-dw-Yrb">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -178,7 +131,7 @@
         <!--Rules Onboarding View Controller-->
         <scene sceneID="CkW-u8-zTV">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="SXy-kw-Jed" customClass="RulesOnboardingViewController" customModule="JustBreateApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="SXy-kw-Jed" customClass="RulesOnboardingViewController" customModule="Zō" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="BHz-sF-d8L">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -249,7 +202,7 @@ Please report any violations.</string>
         <!--Username Onboarding View Controller-->
         <scene sceneID="K9j-1e-57p">
             <objects>
-                <viewController modalPresentationStyle="fullScreen" id="QTW-cv-q4V" customClass="UsernameOnboardingViewController" customModule="JustBreateApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController modalPresentationStyle="fullScreen" id="QTW-cv-q4V" customClass="UsernameOnboardingViewController" customModule="Zō" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tgH-dN-Vft">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -287,6 +240,7 @@ To encourage sincerty, please do not use any personal identifiers.</string>
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                         <connections>
+                                            <action selector="nextButtonTapped:" destination="QTW-cv-q4V" eventType="touchUpInside" id="oSM-CG-KCE"/>
                                             <segue destination="OW9-j0-fMR" kind="show" id="DCI-yB-w6Y"/>
                                         </connections>
                                     </button>
@@ -307,6 +261,9 @@ To encourage sincerty, please do not use any personal identifiers.</string>
                         <viewLayoutGuide key="safeArea" id="X9y-7O-6tp"/>
                     </view>
                     <navigationItem key="navigationItem" id="Rqi-N0-9iS"/>
+                    <connections>
+                        <outlet property="createUsernameTextField" destination="cpg-NZ-sYh" id="Jqa-7o-oEF"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rPs-Il-5Fc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

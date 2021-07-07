@@ -13,7 +13,8 @@ class RequestController {
     
     static let shared = RequestController()
     
-    var requests = [Request]()
+    var requests: [Request] = []
+    var myRequests: [Request] = []
     
     let publicDataBase = CKContainer.default().publicCloudDatabase
     
@@ -40,8 +41,7 @@ class RequestController {
     }
     
     func fetchRequests(completion: @escaping (Bool) -> Void) {
-        guard let currentUserRespondedTo = UserController.shared.currentUser?.respondedTo else { completion(false); return }
-        let predicate = NSPredicate(format: "\(RequestConstants.userReferenceKey) != %@", currentUserRespondedTo)
+        let predicate = NSPredicate(value: true)
         let query = CKQuery(recordType: RequestConstants.recordTypeKey, predicate: predicate)
         publicDataBase.perform(query, inZoneWith: nil) { (records, error) in
             
@@ -52,9 +52,20 @@ class RequestController {
             }
             
             guard let records = records else { completion(false); return }
+            
+            
             let requests = records.compactMap({Request(ckRecord: $0)})
             
-            self.requests = requests
+            var filteredRequests: [Request] = []
+            
+            for request in requests {
+                guard let user = UserController.shared.currentUser else { completion(false); return }
+                if !user.respondedTo.contains(request.recordID.recordName) {
+                    filteredRequests.append(request)
+                }
+            }
+            
+            self.requests = filteredRequests
             completion(true)
         }
     }

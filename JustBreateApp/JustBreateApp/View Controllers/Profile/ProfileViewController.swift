@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class ProfileViewController: UIViewController {
     
@@ -16,12 +17,25 @@ class ProfileViewController: UIViewController {
     @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var pastRequestsTableView: UITableView!
     
+    // MARK: - Properties
+    let currentUser = UserController.shared.currentUser
+    var points = 20000
+    
     // MARK: - Lifecycle Functions
     override func viewDidLoad() {
         super.viewDidLoad()
         pastRequestsTableView.delegate = self
         pastRequestsTableView.dataSource = self
         setupViews()
+        
+        guard let currentUser = currentUser else { return }
+        currentUser.kpPoints = points
+        if points == 20000 {
+            guard let viewController = UIStoryboard(name: "PointsAndRank", bundle: nil).instantiateViewController(withIdentifier: "pointsAndRankStoryBoard") as? PointsAndRankVC else { return }
+            self.present(viewController, animated: true, completion: nil)
+            
+            points += 5
+        }
     }
     
     
@@ -32,9 +46,15 @@ class ProfileViewController: UIViewController {
     }
 
     
-    // MARK: - Navigation
-
+    // MARK: - Actions
+    @IBAction func profileOptionsButtonTapped(_ sender: Any) {
+        guard let url = URL(string: "https://cameronstuart.com/zo-support") else { return }
+        let svc = SFSafariViewController(url: url)
+        present(svc, animated: true)
+    }
     
+    
+    // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
     }

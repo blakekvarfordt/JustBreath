@@ -48,22 +48,46 @@ class UserController {
         }
     }
     
+    func fetchUserReference(completion: @escaping (Bool) -> Void) {
+        
+        CKContainer.default().fetchUserRecordID { (record, error) in
+            if let error = error {
+                print("Error: \(error.localizedDescription)")
+                completion(false)
+                return
+            }
+            
+            if let record = record {
+                let reference = CKRecord.Reference(recordID: record, action: .deleteSelf)
+                self.userReference = reference
+                print("Got user ref")
+                completion(true)
+            }
+        }
+    }
+    
     func fetchUser(completion: @escaping (Bool) -> Void) {
         
         guard let reference = userReference else { completion(false); return }
-        let predicate = NSPredicate(format: "\(UserConstants.typeKey)", reference)
+        let predicate = NSPredicate(format: "\(UserConstants.appleUserReferenceKey) == %@", reference)
         let query = CKQuery(recordType: UserConstants.typeKey, predicate: predicate)
         publicDB.perform(query, inZoneWith: nil) { (userRecord, error) in
             if let error = error {
+                print("Don't got user.")
                 print("Failed to fetch user! \n Error: \(error) \n \(error.localizedDescription)")
                 completion(false)
                 return
             }
             
             if let userRecord = userRecord {
-                let foundUser = User(ckRecord: userRecord[0])
-                self.currentUser = foundUser
-                completion(true)
+                if userRecord.count > 0 {
+                    let foundUser = User(ckRecord: userRecord[0])
+                    self.currentUser = foundUser
+                    print("Got User")
+                    completion(true)
+                } else {
+                    completion(false)
+                }
             }
         }
     }

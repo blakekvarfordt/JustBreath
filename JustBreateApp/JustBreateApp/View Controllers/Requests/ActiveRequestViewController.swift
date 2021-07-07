@@ -11,14 +11,15 @@ import UIKit
 class ActiveRequestViewController: UIViewController {
 
     // MARK: - Outlets
-    
-    @IBOutlet weak var usernameLabel: UILabel!
     @IBOutlet weak var tagsLabel: UILabel!
     @IBOutlet weak var requestImageView: UIImageView!
     @IBOutlet weak var numberOfResponsesLabel: UILabel!
     @IBOutlet weak var requestBodyLabel: UILabel!
     
     @IBOutlet weak var responsesTableView: UITableView!
+    
+    // MARK: - Properties
+    var request: Request?
     
     // MARK: - Lifecycle Methods
 

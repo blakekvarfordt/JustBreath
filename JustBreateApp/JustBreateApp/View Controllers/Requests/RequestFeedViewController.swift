@@ -11,7 +11,6 @@ import UIKit
 class RequestFeedViewController: UIViewController {
 
     // MARK: - Outlets
-    
     @IBOutlet weak var tagsSearchBar: UISearchBar!
     @IBOutlet weak var pastRequestsTableView: UITableView!
     @IBOutlet weak var requestsLabel: UILabel!
@@ -21,7 +20,6 @@ class RequestFeedViewController: UIViewController {
     
     
     // MARK: - Lifecycle Methods
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,7 +27,16 @@ class RequestFeedViewController: UIViewController {
         activeRequestsFeedTableView.dataSource = self
         pastRequestsTableView.delegate = self
         pastRequestsTableView.dataSource = self
-        // Do any additional setup after loading the view.
+        RequestController.shared.fetchRequests { (success) in
+            if success {
+                DispatchQueue.main.async {
+                    self.activeRequestsFeedTableView.reloadData()
+                    print("Fetched requests")
+                }
+            } else {
+                print("Failed to fetch requests.")
+            }
+        }
     }
     
     override func viewDidLayoutSubviews() {
@@ -37,34 +44,31 @@ class RequestFeedViewController: UIViewController {
         pastRequestsTableView.reloadData()
     }
     
-    // MARK: - Actions
+    // MARK: - Custom Methods
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toViewActivePastRequest" {
+            if let index = pastRequestsTableView.indexPathForSelectedRow {
+                guard let destinationVC = segue.destination as? ActiveRequestViewController else { return }
+                let requestToSend = RequestController.shared.requests[index.row]
+                destinationVC.request = requestToSend
+            }
+        } else if segue.identifier == "toResponseToRequest" {
+            if let index = activeRequestsFeedTableView.indexPathForSelectedRow {
+                guard let destinationVC = segue.destination as? RespondToRequestViewController else { return }
+                let requestToSend = RequestController.shared.requests[index.row]
+                destinationVC.request = requestToSend
+            }
+        }
+    }
     
+    // MARK: - Actions
     @IBAction func rulesButtonTapped(_ sender: Any) {
     }
     
     @IBAction func addNewRequestButtonTapped(_ sender: Any) {
     }
     
-    
-    // MARK: - Custom Methods
-    
-    
     // MARK: - UI Adjustments
-
-
-
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
 
 extension RequestFeedViewController: UITableViewDelegate, UITableViewDataSource {
@@ -74,7 +78,7 @@ extension RequestFeedViewController: UITableViewDelegate, UITableViewDataSource 
         if tableView == pastRequestsTableView {
             return ProfileMockDataController1.shared.mockDataObjects.count
         } else {
-            return ProfileMockDataController2.shared.mockDataObjects.count
+            return RequestController.shared.requests.count
         }
     }
     
@@ -92,15 +96,13 @@ extension RequestFeedViewController: UITableViewDelegate, UITableViewDataSource 
         } else {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: "activeRequestCell", for: indexPath) as? ActiveRequestsTableViewCell else { return UITableViewCell()}
             
-            let request = ProfileMockDataController2.shared.mockDataObjects[indexPath.row]
+            let request = RequestController.shared.requests[indexPath.row]
             
             cell.requestLandingPad = request
             
             return cell
         }
     }
-    
-    
 }
 
 
